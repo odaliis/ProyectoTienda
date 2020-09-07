@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h2> Crear Docente </h2>
+    <form method="POST" action = "{% url 'creardocente' %}">
+        {% csrf_token %}
+        {{ formDocente.as_p  }}
+
+
+        <input type="submit" value="Crear Docente" />
+    </form>
+{% endblock %}
